@@ -9,7 +9,7 @@ By Ishita Jain
 You can try the app with the superuser credentials set at the time of 
 ```
 python manage.py createsuperuser
-```.
+```
 
 1. *Homepage* - informational start page
 2. *Login/ Authentication* - you would need the superuser username and password to log into the app
