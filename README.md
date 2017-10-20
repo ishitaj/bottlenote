@@ -11,7 +11,7 @@ Language Learning Note-Taking Application
 6. `npm install`
 7. `npm run build`
 8. `npm run watch`
-
+```
 ### Create database
 ```
 python manage.py migrate
