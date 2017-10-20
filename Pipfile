@@ -1,0 +1,17 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[dev-packages]
+
+
+
+[packages]
+
+Django = "==1.9.4"
+django-cors-headers= "==2.1.0"
+djangorestframework = "==3.3.3"
+django-webpack-loader = "==0.5.0"
