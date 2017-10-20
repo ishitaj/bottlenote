@@ -23,18 +23,22 @@ python manage.py createsuperuser
 5. **Logout** - Logs the user out
 
 ## Project Decisions and Reasons
-The project has been built in **Python with Django** for the backend API and **reactJS** for the frontend. For the database, **sqlite** has been used. **Webpack** has been used as the build tool.
+The project has been built in **Python with Django** for the backend API and **reactJS** for the frontend. For the database, **sqlite** has been used. **Webpack** has been used as the build tool. The data is cached for super fast loading.
 
-1. *All notes on one page instead of groups appearing first and then entering a specific language to view notes*
+1. *All notes on one page instead of groups appearing first and then entering a specific language to view notes* - 
 I chose to keep all notes on one page to minimize clicks and ensure maximum readability of the notes to enable quick learnign by revisiting words.
-2. *Grouping using alphabetical order on language as well as unique color for each language*
+2. *Grouping using alphabetical order on language as well as unique color for each language* - 
 This helps the user easily identify Notes of the same language while also enabling quick browsing throughout the list.
-3. *Delete button on each Note element*
+3. *Delete button on each Note element* - 
 The delete button has been added on each note on the top right for quick accessibility. The edit button can be added just beside the delete.
-4. *Storing a local list of items or a cache store for seamless user experience*
+4. *Storing a local list of items or a cache store for seamless user experience* - 
 To make sure that the user doesn't have to wait to be catered to, a cache is maintained containing the Note data. On load, post and delete, the Note list status is updated in the cache store for quick access.
-5. *Database choice*
-Sqlite has been used for the small scale project. Though searching and indexing can become much faster with powerful databases like postGres or mySQL. 
+5. *Database choice* - 
+Sqlite has been used for the small scale project. Though searching and indexing can become much faster with powerful databases like postGres or mySQL. If updates are limited, a No-SQL database having user clusters might also prove useful.
+6. *Separation of concerns* - 
+As the backend API and Frontend are two different mini apps talking to each other, scaling can be made effective by distributing the Application and the Database on different servers and adding a load balancing layer to monitor request rate. That will allow usage of independent resources.
+7. *Limited testing done*
+Basic tests have been done for the Note model, serializer and view. Frontend can be tested using selenium.
 
 ## TODOs / Future Work
 1. Social OAuth integration for login.
@@ -47,6 +51,8 @@ Sqlite has been used for the small scale project. Though searching and indexing 
 8. Dictionary API to auto fill meaning
 9. Pronunciation audio of the word added automatically from google translate
 10. Store pronunciation audio file of the word by the user.
+11. Searching and Filtering notes
+12. Making Notes shareable across users and to external resources to enable learning groups
 
 
 ## Quickstart guide to run the application
