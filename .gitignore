@@ -99,3 +99,12 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+*.swp
+node_modules/
+assets/bundles/main.js
+webpack-stats.json
+# python virtual environment
+db.sqlite3
+env/
+npm-debug.log
